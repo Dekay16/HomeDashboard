@@ -1,0 +1,195 @@
+﻿@model DashboardViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+
+
+<div class="container-fluid">
+    <!-- Greeting -->
+    <div class="welcome-card mb-4">
+        <div>
+            <h1>
+                Good Afternoon 👋
+            </h1>
+
+
+            <p>
+                Here is what is happening around your home.
+            </p>
+
+
+        </div>
+        <i class="bi bi-house-heart-fill"></i>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="dashboard-card">
+                <div class="icon">
+
+                    <i class="bi bi-door-open"></i>
+
+                </div>
+
+
+                <h2>
+                    @Model.RoomCount
+                </h2>
+
+
+                <p>
+                    Rooms
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="dashboard-card">
+                <div class="icon">
+
+                    <i class="bi bi-plug"></i>
+
+                </div>
+
+
+                <h2>
+                    @Model.ApplianceCount
+                </h2>
+
+
+                <p>
+                    Appliances
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="dashboard-card">
+                <div class="icon">
+
+                    <i class="bi bi-car-front"></i>
+
+                </div>
+
+
+                <h2>
+                    @Model.VehicleCount
+                </h2>
+
+
+                <p>
+                    Vehicles
+                </p>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="dashboard-card">
+                <div class="icon">
+
+                    <i class="bi bi-bell"></i>
+
+                </div>
+
+
+                <h2>
+                    @Model.ReminderCount
+                </h2>
+
+
+                <p>
+                    Reminders
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="section-card mt-5">
+        <h4>
+            Quick Actions
+        </h4>
+        <div class="quick-actions">
+            <button>
+                <i class="bi bi-plus-circle"></i>
+                Reminder
+            </button>
+
+
+            <button>
+                <i class="bi bi-upload"></i>
+                Document
+            </button>
+
+
+            <button>
+                <i class="bi bi-tools"></i>
+                Maintenance
+            </button>
+
+
+            <button>
+                <i class="bi bi-car-front"></i>
+                Vehicle
+            </button>
+        </div>
+    </div>
+
+    <!-- Upcoming -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="section-card">
+                <h4>
+                    Upcoming Maintenance
+                </h4>
+                <ul class="list-group list-group-flush">
+
+
+                    <li class="list-group-item">
+                        Replace furnace filter
+                        <span class="badge bg-warning">
+                            7 days
+                        </span>
+                    </li>
+
+
+                    <li class="list-group-item">
+                        Rotate truck tires
+                        <span class="badge bg-secondary">
+                            30 days
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="section-card">
+                <h4>
+                    Recent Activity
+                </h4>
+                <ul class="list-group list-group-flush">
+
+
+                    <li class="list-group-item">
+                        Added kitchen paint color
+                    </li>
+
+
+                    <li class="list-group-item">
+                        Uploaded furnace manual
+                    </li>
+
+
+                    <li class="list-group-item">
+                        Recorded oil change
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

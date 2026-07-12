@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../HomeDashboard.Business/HomeDashboard.Business.csproj" Id="43c1aaa7-1687-40c8-a9eb-99aef34328d9" />
+  <Project Path="../HomeDashboard.Data/HomeDashboard.Data.csproj" Id="f3160182-1699-4472-8935-4d18688b9936" />
+  <Project Path="../HomeDashboard.Domain/HomeDashboard.Domain.csproj" Id="b2674457-ff32-4fe6-b075-50897a104331" />
+  <Project Path="../HomeDashboard.Shared/HomeDashboard.Shared.csproj" Id="55e6d9a1-3347-48d6-9a8e-66d5b4293004" />
+  <Project Path="HomeDashboard.csproj" />
+</Solution>

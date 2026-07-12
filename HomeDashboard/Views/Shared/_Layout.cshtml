@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - Home Dashboard</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="bi bi-house-heart-fill"></i>
+                <span>
+                    HomeHub
+                </span>
+            </div>
+            <nav class="menu">
+                <a asp-controller="Home"
+                   asp-action="Index"
+                   class="menu-item">
+                    <i class="bi bi-grid"></i>
+                    Dashboard
+                </a>
+                <a asp-controller="Rooms"
+                   asp-action="Index"
+                   class="menu-item">
+                    <i class="bi bi-door-open"></i>
+                    Rooms
+                </a>
+                <a asp-controller="Appliances"
+                   asp-action="Index"
+                   class="menu-item">
+                    <i class="bi bi-plug"></i>
+                    Appliances
+                </a>
+                <a asp-controller="Vehicles"
+                   asp-action="Index"
+                   class="menu-item">
+                    <i class="bi bi-car-front"></i>
+                    Vehicles
+                </a>
+                <a asp-controller="Maintenance"
+                   asp-action="Index"
+                   class="menu-item">
+                    <i class="bi bi-tools"></i>
+                    Maintenance
+                </a>
+                <a asp-controller="Documents"
+                   asp-action="Index"
+                   class="menu-item">
+                    <i class="bi bi-folder"></i>
+                    Documents
+                </a>
+                <a asp-controller="Inventory"
+                   asp-action="Index"
+                   class="menu-item">
+                    <i class="bi bi-box-seam"></i>
+                    Inventory
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="theme-button">
+                    <i class="bi bi-moon"></i>
+                    Dark Mode
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Area -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="topbar">
+
+                <div>
+                    <h5 class="mb-0">
+                        @ViewData["Title"]
+                    </h5>
+                </div>
+
+                <div class="profile">
+                    <i class="bi bi-person-circle fs-3"></i>
+                </div>
+            </header>
+            <section class="page-content">
+
+                @RenderBody()
+
+            </section>
+        </main>
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>
